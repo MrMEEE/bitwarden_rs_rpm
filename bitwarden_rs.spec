@@ -11,8 +11,8 @@ Summary: Bitwarden RS
 Name: bitwarden_rs
 Version: ¤VERSION¤
 Release: 1%{dist}
-Source0: ¤SOURCE¤
-Source1: settings.py.dist
+Source0: bitwarden_rs-v¤VERSION¤
+Source1: 
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
@@ -29,20 +29,15 @@ mkdir -p $RPM_BUILD_ROOT%{service_homedir}/server/conf
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/server/data
 mkdir -p %{buildroot}%{service_logdir}
 mkdir -p %{buildroot}%{service_configdir}
-mkdir -p %{buildroot}/var/lib/awx/
-echo ¤TOWER_VERSION¤ > %{buildroot}%{service_homedir}/.tower_version
 
+install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/server/bin/bitwarden_rs
 
-cp %{_sourcedir}/settings.py.dist %{buildroot}%{service_configdir}/settings.py
-mv static %{buildroot}%{_prefix}/static
-
-%if 0%{?el7}
 # Install systemd configuration
 mkdir -p %{buildroot}%{_unitdir}
 for service in awx-cbreceiver awx-dispatcher awx-channels-worker awx-daphne awx-web awx; do
     cp %{_sourcedir}/${service}.service %{buildroot}%{_unitdir}/
 done
-%endif
+
 
 # Create fake python executable
 cat > %{buildroot}%{_prefix}/bin/python <<"EOF"
