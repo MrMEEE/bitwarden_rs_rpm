@@ -9,7 +9,7 @@
 
 Summary: Bitwarden RS
 Name: bitwarden_rs
-Version: 1.9.1-git¤VERSION¤
+Version: 1.9.1.git¤VERSION¤
 Release: 1%{dist}
 Source0: bitwarden_rs-¤VERSION¤
 Source1: bitwarden_rs.service
