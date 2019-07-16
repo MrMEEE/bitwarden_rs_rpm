@@ -13,7 +13,7 @@ Version: 1.9.1.git¤VERSION¤
 Release: 1%{dist}
 Source0: bitwarden_rs-¤VERSION¤
 Source1: bitwarden_rs.service
-Source2: bitwarden-rs.conf-¤VERSION¤
+Source2: bitwarden_rs.conf-¤VERSION¤
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
