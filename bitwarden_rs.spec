@@ -9,11 +9,11 @@
 
 Summary: Bitwarden RS
 Name: bitwarden_rs
-Version: 1.9.1.git¤VERSION¤
+Version: ¤VERSION¤
 Release: 1%{dist}
-Source0: bitwarden_rs-¤VERSION¤
+Source0: bitwarden_rs-¤RELEASE¤
 Source1: bitwarden_rs.service
-Source2: bitwarden_rs.conf-¤VERSION¤
+Source2: bitwarden_rs.conf-¤RELEASE¤
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
