@@ -18,6 +18,7 @@ License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
 AutoReqProv: false
+Requires: bitwarden_rs_web
 
 %description
 %{summary}
