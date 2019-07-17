@@ -11,7 +11,7 @@ Summary: Bitwarden Rust Edition Web Interface
 Name: bitwarden_rs_web
 Version: ¤VERSION¤
 Release: 1%{dist}
-Source0: bw_web_¤RELEASE¤.tar.gz
+Source0: bw_web_%{version}.tar.gz
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
