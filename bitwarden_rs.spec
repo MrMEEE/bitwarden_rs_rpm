@@ -59,6 +59,7 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/bitwarden-rs.conf
 %config %{service_configdir}/bitwarden-rs.conf
 %{service_homedir}/server
 %dir %{service_homedir}/server/data
+%attr(0755, bitwarden, bitwarden) %{buildroot}/%{service_homedir}/server/bin/bitwarden_rs
 %attr(0644, root, root) %{_unitdir}/bitwarden_rs.service
 
 %changelog
