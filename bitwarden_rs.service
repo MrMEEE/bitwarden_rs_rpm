@@ -10,7 +10,7 @@ Group=bitwarden
 # The location of the .env file for configuration
 EnvironmentFile=/etc/bitwarden_rs/bitwarden-rs.conf
 # The location of the compiled binary
-ExecStart=/opt/bitwarden-rs/server/bin/bitwarden_rs
+ExecStart=/opt/bitwarden_rs/server/bin/bitwarden_rs
 # Set reasonable connection and process limits
 LimitNOFILE=1048576
 LimitNPROC=64
@@ -20,8 +20,8 @@ PrivateDevices=true
 ProtectHome=true
 ProtectSystem=strict
 # Only allow writes to the following directory and set it to the working directory (user and password data are stored here)
-WorkingDirectory=/opt/bitwarden-rs
-ReadWriteDirectories=/opt/bitwarden-rs
+WorkingDirectory=/opt/bitwarden_rs
+ReadWriteDirectories=/opt/bitwarden_rs
 # Allow bitwarden_rs to bind ports in the range of 0-1024
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 
