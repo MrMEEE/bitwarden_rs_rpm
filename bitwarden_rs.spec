@@ -10,7 +10,7 @@
 Summary: Bitwarden RS
 Name: bitwarden_rs
 Version: ¤VERSION¤
-Release: 5%{dist}
+Release: ¤BUILDRELEASE¤%{dist}
 Source0: bitwarden_rs-¤RELEASE¤
 Source1: bitwarden_rs.service
 Source2: bitwarden_rs.conf-¤RELEASE¤
