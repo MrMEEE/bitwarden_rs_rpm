@@ -10,7 +10,7 @@
 Summary: Bitwarden RS
 Name: bitwarden_rs
 Version: ¤VERSION¤
-Release: 1%{dist}
+Release: 3%{dist}
 Source0: bitwarden_rs-¤RELEASE¤
 Source1: bitwarden_rs.service
 Source2: bitwarden_rs.conf-¤RELEASE¤
@@ -34,8 +34,9 @@ mkdir -p %{buildroot}%{service_logdir}
 mkdir -p %{buildroot}%{service_configdir}
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/server/bin/bitwarden_rs
-install -m 755 %{SOURCE1} %{buildroot}/%{service_configdir}/bitwarden-rs.conf
-install -m 755 %{SOURCE2} %{buildroot}/%{_unitdir}/bitwarden_rs.service
+install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/bitwarden_rs.service
+install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/bitwarden-rs.conf
+
 
 %pre
 /usr/bin/getent group %{service_group} >/dev/null || /usr/sbin/groupadd --system %{service_group}
@@ -57,6 +58,7 @@ install -m 755 %{SOURCE2} %{buildroot}/%{_unitdir}/bitwarden_rs.service
 %defattr(0644, bitwarden, bitwarden, 0755)
 %config %{service_configdir}/bitwarden-rs.conf
 %{service_homedir}/server
+%dir %{service_homedir}/server/data
 %attr(0644, root, root) %{_unitdir}/bitwarden_rs.service
 
 %changelog
