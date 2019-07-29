@@ -14,9 +14,19 @@ Secure mariadb installation:
 mysql_secure_installation
 ```
 
+Create bitwarden database:
+```
+echo "create database bitwarden;" | mysql -uroot -p
+```
+
 Add repository:
 ```
 curl -o /etc/yum.repos.d/mrmeee-bitwarden_rs-epel-7.repo https://copr.fedorainfracloud.org/coprs/mrmeee/bitwarden_rs/repo/epel-7/mrmeee-bitwarden_rs-epel-7.repo
+```
+
+Install bitwarden_rs and web
+```
+yum -y install bitwarden_rs
 ```
 
 Temporary fix for wrong path, will be fixed in next release:
