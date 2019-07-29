@@ -30,6 +30,11 @@ tar zxvf %{SOURCE0} -C $RPM_BUILD_ROOT%{service_homedir}/web
 
 %clean
 
+%pre
+/usr/bin/getent group %{service_group} >/dev/null || /usr/sbin/groupadd --system %{service_group}
+/usr/bin/getent passwd %{service_user} >/dev/null || /usr/sbin/useradd --no-create-home --system -g %{service_group} --home-dir %{service_homedir} -s /bin/bash %{service_user}
+/usr/sbin/usermod -s /bin/bash %{service_user}
+
 %files
 %defattr(0644, bitwarden, bitwarden, 0755)
 %{service_homedir}/web
