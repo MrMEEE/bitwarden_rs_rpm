@@ -40,6 +40,8 @@ tar zxvf %{SOURCE0} -C $RPM_BUILD_ROOT%{service_homedir}/web
 %{service_homedir}/web
 
 %changelog
+* Wed Sep 04 2019 21:08:51 +0000 Martin Juhl <mj@casalogic.dk> v2.11.0b
+- New version build: v2.11.0b
 * Wed Jul 31 2019 03:02:43 +0000 Martin Juhl <mj@casalogic.dk> v2.11.0
 - New version build: v2.11.0
 * Wed Jul 17 2019 20:58:48 +0000 Martin Juhl <mj@casalogic.dk> v2.10.1
