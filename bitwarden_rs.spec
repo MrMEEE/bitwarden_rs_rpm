@@ -63,6 +63,8 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/bitwarden-rs.conf
 %attr(0644, root, root) %{_unitdir}/bitwarden_rs.service
 
 %changelog
+* Thu Oct 17 2019 19:09:47 +0000 Martin Juhl <mj@casalogic.dk> 1.11.0.git95a7ffd-1
+- New version build: 1.11.0.git95a7ffd-1
 * Wed Oct 16 2019 18:11:18 +0000 Martin Juhl <mj@casalogic.dk> 1.11.0.gitcd8acc2-1
 - New version build: 1.11.0.gitcd8acc2-1
 * Tue Oct 15 2019 21:13:01 +0000 Martin Juhl <mj@casalogic.dk> 1.11.0.gitd3054d4-1
