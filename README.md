@@ -34,7 +34,7 @@ Temporary fix for wrong path, will be fixed in next release:
 sed -i 's$/opt/bitwarden-rs$/opt/bitwarden_rs$g' /etc/bitwarden_rs/bitwarden-rs.conf
 ```
 
-In /etc/bitwarden_rs/bitwarden-rs.conf (what I use besides of the standard):
+Example `/etc/bitwarden_rs/bitwarden-rs.conf` (what I use instead of the standard):
 ```
 DATABASE_URL="mysql://root:*********@localhost/bitwarden"
 SIGNUPS_ALLOWED=false
